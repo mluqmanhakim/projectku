@@ -23,4 +23,19 @@ public class EventServiceDatabase implements EventService {
 		return eventMapper.ambilSemuaEvent();
 	}
 
+	@Override
+	public void ubahEvent(EventModel event) {
+		eventMapper.ubahEvent(event);
+	}
+	
+	@Override
+	public EventModel ambilEvent(int id) {
+		return eventMapper.ambilEvent(id);
+	}
+
+	@Override
+	public void hapusEvent(int id) {
+		eventMapper.hapusEvent(id);
+	}
+
 }

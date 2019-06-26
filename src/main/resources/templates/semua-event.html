@@ -5,8 +5,14 @@
 </head>
 <body>
 	<h1>Semua Event</h1>
-	<div th:each="event:events">
-		<h3 th:text></h3>
+	<div th:each="event: ${events}">
+		<h2 th:text="${event.nama}"></h2>
+		<p th:text="${event.kategori}"></p>
+		<p th:text="${event.lokasi}"></p>
+		<p th:text="${event.deskripsi}"></p>
+		<a th:href="'/event/ubah/' + ${event.id}">Ubah</a>
+		<a th:href="'/event/hapus/' + ${event.id}">Hapus</a>
+		<hr>
 	</div>
 </body>
 </html>

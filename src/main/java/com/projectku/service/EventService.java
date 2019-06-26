@@ -8,4 +8,10 @@ public interface EventService {
 	void tambahEvent(EventModel event);
 	
 	List<EventModel> lihatSemuaEvent();
+	
+	void ubahEvent(EventModel event);
+	
+	EventModel ambilEvent(int id);
+	
+	void hapusEvent(int id);
 }
